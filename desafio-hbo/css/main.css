@@ -1,0 +1,228 @@
+.descricao {
+   background: url(../assets/img/background-movies-series.png);
+   background-repeat: no-repeat;
+   background-size: cover;
+   position: relative;;
+}
+
+.container {
+    max-width: 1200px;
+    margin: auto;
+    padding: 24px;
+    text-align: center;
+}
+
+.chamada {
+    text-align: center;
+    padding: 24px;
+    margin: 0px 100px;
+    font-family: "Raleway", sans-serif;
+    font-size: 1.75rem;
+    font-weight: 300;
+}
+
+.descricao__planos {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.descricao__card {
+    background: var(--card-bg-color);
+    margin-right: 10px;
+    margin-left: 0px;
+    padding: 40px 60px;
+    border-radius: 8px;
+    display: flex;
+    max-width: 400px;
+    min-height: 500px;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: transform 1s ease-in-out;
+}
+
+.descricao__planos:has(.descricao__card:nth-child(1):hover)
+  .descricao__card:nth-child(2) {
+  transform: rotateY(+45deg);
+}
+
+.descricao__planos:has(.descricao__card:nth-child(2):hover)
+  .descricao__card:nth-child(1) {
+  transform: rotateY(+45deg);
+}
+
+.descricao__mobile {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    font-family: "Raleway", sans-serif;
+    font-size: 1.3rem;
+    font-weight: 700;
+    margin-bottom: 30px;    
+}
+
+.descricao__preco {
+    font-size: larger;
+    font-size: 1.7rem;
+    font-weight: 700;
+    color: var(--secondary-color);
+}
+
+.mes {
+    color: var(--text-color);
+}
+
+.descricao__info {
+    text-align: left;
+}
+
+.descricao__info__desc {
+    display: flex;
+    list-style: none;
+    padding-left: 14px;
+    margin-bottom: 20px;
+    font-size: 1.28rem;
+    font-weight:lighter;
+    letter-spacing: 0.5px;
+}
+
+.descricao__info__desc::marker {
+    content: "+";
+    font-size: 2rem;
+    margin: 0 8px 0 0;
+  }
+
+li::marker {
+    content: "+";
+    font-size: 2rem;
+    margin: 0 8px 0 0;
+}
+
+/** contentes **/
+
+.contents {
+    margin: 100px auto;
+}
+
+.contents__container {
+    margin-top: 40px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px
+}
+
+.contents__card {
+    border-radius: 16px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    border: 2px solid transparent;
+    transition: transform 0.8s, backgroud 0.8s, border 1s;
+}
+
+.contents__card:hover {
+    transform: scale(1.05);
+    border: 2px solid var(--tertinary-color);
+}
+
+.contents__card:hover .contents__imagem {
+    opacity: 0;
+  }
+
+.contents__imagem {
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+    transition: opacity 2s;
+}
+
+.contents__card:nth-child(1):hover{
+    background-image: url("../assets/img/hbo-hover_0.webp");
+  }
+
+.contents__card:nth-child(2):hover {
+    background-image: url("../assets/img/MAX-Hover.webp");
+}
+
+.contents__card:nth-child(3):hover {
+    background-image: url("../assets/img/DC-Hover.webp");
+}
+
+.contents__card:nth-child(4):hover {
+    background-image: url("../assets/img/WB-Hover.webp");
+}
+
+.contents__card:nth-child(5):hover {
+    background-image: url("../assets/img/CN-Hover.png");
+}
+
+.contents__card:nth-child(6):hover {
+    background: url("../assets/img/UCL-Hover.webp");
+}
+
+
+@media screen and (max-width: 1200px){
+    .descricao__planos {
+        gap: 40px;
+    }
+    .contents__container {
+        gap: 32px;
+    }
+}
+
+@media screen and (max-width: 1140px) {
+    .descricao__planos {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .descricao__card {
+        max-width: 450px;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .contents__container{
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .descricao__preco {
+        font-size: 1.5rem;
+    }    
+
+    .descricao__info {
+        font-size: 1rem;
+    }
+
+    .descricao__planos {
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .descricao__card {
+        padding: 40px;
+    }
+
+    .contents__container {
+        grid-template-columns: repeat(6, 100%);
+        grid-auto-flow: column;
+        overflow: auto hidden;
+    }
+}
+
+
+@media (pointer: coarse) {
+    .contents__card:hover {
+      transform: none;
+    }
+  
+    .subscription__plans:has(.subscription__card:nth-child(1):hover)
+      .subscription__card:nth-child(2),
+    .subscription__plans:has(.subscription__card:nth-child(2):hover)
+      .subscription__card:nth-child(1) {
+      transform: none;
+    }
+  }

@@ -1,0 +1,66 @@
+ @import url(./reset.css);
+ @import url(./variaveis.css);
+ @import url(./nav.css);
+ @import url(./header.css);
+ @import url(./main.css);
+ @import url(./footer.css);
+ 
+ /* Custom Scroll */
+
+ ::-webkit-scrollbar {
+    width: 8px;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: var(--tertiary-color);
+    border-radius: 10px;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: var(--secondary-color);
+  }
+
+  .button {
+    padding: 16px 40px;
+    background: var(--tertiary-color);
+    border-radius: 500px;
+    color: var(--text-color);
+    font-weight: 700;
+    text-transform: uppercase;
+    text-decoration: none;
+    letter-spacing: 2px;
+    border: none;
+    cursor: pointer;
+  }
+
+  body {
+    background: var(--primary-color);
+    color: var(--text-color);
+
+    margin: 0;
+    padding: 0;
+  }
+
+  .button--gradient {
+    background: var(--btn-bg-color-gradient);
+    outline: 3px solid transparent;
+    transition: background 1s, outline 1s, transform 1s;
+    background-size: 250%;
+  }
+
+  .button--gradient:hover {
+    background-color: transparent;
+    background-position: 100%;
+    outline: 2px solid var(--secondary-color);
+    transform: scale(1.05);
+  }
+
+  .mes {
+    font-size: 1rem;
+    font-weight: 300;
+  }
+
+  .texto__pequeno {
+    font-size: 1rem;
+    font-weight: 300;
+  }

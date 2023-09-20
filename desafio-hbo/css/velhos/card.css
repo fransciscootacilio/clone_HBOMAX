@@ -1,0 +1,78 @@
+.subscription {
+    background-image: url(../assets/img/background-movies-series.png);
+    background-size: cover;
+    position: relative;
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: auto;
+    padding: 0;
+    font-family: "Raleway", sans-serif;
+    text-align: center;
+}
+
+.info__planos {
+    font-size: 2rem;
+}
+
+.container__planos {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 1rem 2rem;
+    border-radius: 5px;
+    padding: 2rem;
+
+    font-size: 1.2rem;
+    font-weight: lighter;
+}
+
+.container__plano--tipos {
+    display: flex;
+    width: 45%;
+    max-width: 400px;
+    background: var(--card-bg-color);
+    text-align: justify;
+    line-height: 100%;
+}
+
+.container__info__valor{
+    display: flex;
+    flex-direction: row;
+    font-family: "Raleway", sans-serif;
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+.container__nome {
+    font-weight: bold;
+
+}
+
+.container__valor {
+    color: var(--link-color);
+    font-weight: bold;
+    text-align: end;
+}
+
+.container__valor span {
+    font-size: x-small;
+    font-style: normal;
+    font-weight: lighter;
+    color: var(--text-color)
+}
+
+.botao__container {
+    font-size: 1rem;
+}
+
+li {
+    padding: .7rem;
+}
+
+li::marker {
+    content: "+";
+    font-size: 1rem;
+}
